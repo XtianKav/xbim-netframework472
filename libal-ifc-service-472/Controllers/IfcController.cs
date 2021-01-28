@@ -14,7 +14,7 @@ namespace libal_ifc_service_472
         public IEnumerable<string> Get()
         {
 
-            var file = @"C:\Users\shirs\OneDrive\Dokumente\libal\cobies\SampleHouse.ifc";
+            var file = "SampleHouse.ifc";
             using (var stepModel = IfcStore.Open(file))
             {
                 var facilities = new List<Facility>();
@@ -23,7 +23,7 @@ namespace libal_ifc_service_472
 
                 var facility = facilities.ToArray()[0];
 
-                facility.WriteXml(@"C:\Users\shirs\OneDrive\Dokumente\libal\cobies\SampleHouse.xml");
+                facility.WriteXml("SampleHouse.xml");
             }
 
             return new string[] { "value1", "value2" };
