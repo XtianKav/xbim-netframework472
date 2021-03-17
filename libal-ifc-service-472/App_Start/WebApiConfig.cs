@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 
 namespace libal_ifc_service_472
 {
@@ -15,9 +12,9 @@ namespace libal_ifc_service_472
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                name: "LIBAL IFC API",
+                routeTemplate: "api/{controller}/{action}/{uuid}",
+                defaults: new { action = RouteParameter.Optional, uuid = RouteParameter.Optional }
             );
         }
     }
